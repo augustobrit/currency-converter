@@ -1,17 +1,19 @@
-// Callbacks
-// Promises
-// Async/Await
+// https://api.exchangeratesapi.io/latest?base=USD
+// https://api.exchangeratesapi.io/latest?symbols=USD,GBP
 
-const GITHUB_API = "https://api.github.com/users";
+const EXCH_API = "https://api.exchangeratesapi.io/latest?";
 
-const getUser = async userName => {
-  let user = null;
+const getData = async () => {
   try {
-    user = await (await fetch(`${GITHUB_API}/${user}`)).json();
-    return user;
+    let res = await fetch(EXCH_API);
+    return res.json();
   } catch (error) {
-    console.log("Error", error);
+    console.log(error);
   }
 };
 
-getUser("augustobrit").then(console.log);
+console.log(
+  getData()
+    .then(data => console.log(data.rates))
+    .catch(error => console.log(error.message))
+);

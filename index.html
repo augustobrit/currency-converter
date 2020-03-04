@@ -3,22 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Currency Converter</title>
   </head>
   <body>
-    <div class="header">Logo goes here</div>
-    <div class="middle">
-      <div>
-        <img src="" alt="avatar-img" />
-        <span></span>
+    <header>
+      Logo
+    </header>
+    <main>
+      <div id="fields">
+        <div id="first">
+          <div>
+            <p>USD $</p>
+            <input />
+          </div>
+          <select id="select_first"></select>
+        </div>
+        <div id="second">
+          <div>
+            <p>USD $</p>
+            <input />
+          </div>
+          <select id="select_second"></select>
+        </div>
       </div>
-      <div>Name: Login: Tag:(isPro)</div>
-      <div>Description: Location: Email: Website:</div>
-      <div>Repos: Gists: Followers: Following:</div>
+      <div id="keyboard">
+        <table>
+          <tr>
+            <td></td>
+            <td><button>CE</button></td>
+            <td><button>X</button></td>
+          </tr>
+
+          <tr>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+          </tr>
+
+          <tr>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+          </tr>
+
+          <tr>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><button>0</button></td>
+            <td><button>,</button></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <div class="taxes">
+      <p>X USD = Y,YYYY BRL</p>
+      <p>Atualizado em:</p>
+      <a href="url">Atualizar taxas</a>
     </div>
-    <div class="footer">
-      Footer goes here
-    </div>
+    <footer>Made with</footer>
     <script src="./scripts.js"></script>
   </body>
 </html>
